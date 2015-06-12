@@ -25,9 +25,18 @@ because a model with the same name exists (?)-->
   <h3>By {{author}}</h3>
   <p>{{description}}</p>
 
-  <button class="btn btn-xs btn-primary" {{action 'edit'}}>Edit</button>
+  <button class="btn btn-xs btn-primary" {{action 'edit'}}>Edit Question</button>
+  <button class="btn btn-xs btn-danger" {{action 'deleteQuestion'}}>Delete Question</button>
+  <br>
+  {{outlet}}
 {{/if}}
 
 <br>
+<p>{{#link-to 'new-answer' this class="btn btn-sm btn-success"}}New Answer{{/link-to}}</p>
 
-<button class="btn btn-xs btn-danger" {{action 'delete'}}>Delete</button>
+{{#each comment in comments itemController="comment"}}
+  <p>
+    {{comment.text}}
+    <button class="btn btn-xs btn-danger" {{action 'deleteAnswer'}}>delete</button>
+  </p>
+{{/each}}
