@@ -1,3 +1,3 @@
-Messageboard.Router.map(function() {
+MessageBoard.Router.map(function() {
 
 });

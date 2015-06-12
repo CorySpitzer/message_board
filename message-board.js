@@ -1,1 +1,1 @@
-MessageBoard = Ember.Aplication.create();
+MessageBoard = Ember.Application.create();
