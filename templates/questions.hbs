@@ -1,5 +1,7 @@
 <h1>Questions and Queries</h1>
 
+<button class="btn btn-success">Ask a Question</button>
+
 <ul>
   <!-- We have 'model' available to us from the questions.js route
   which returns all the question(s), which we can loop over: -->
@@ -7,7 +9,7 @@
     <li>(Question loop will display here:)</li>
     <li>
       {{#link-to 'question' question}}
-        {{question.title}}
+        {{question.question}} by {{question.author}}
       {{/link-to}}
     </li>
   {{/each}}

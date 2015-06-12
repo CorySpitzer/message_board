@@ -4,4 +4,5 @@ MessageBoard.Router.map(function() {
   this.resource('questions', {path: '/'});
   // Route a specific post id to the 'post' page:
   // this.resource('question', {path: ':post_id'})
+  this.resource('answers');
 });
