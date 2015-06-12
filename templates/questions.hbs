@@ -1,5 +1,14 @@
 <h1>Questions and Queries</h1>
 
 <ul>
-  <li>(Question loop goes here)</li>
+  <!-- We have 'model' available to us from the questions.js route
+  which returns all the question(s), which we can loop over: -->
+  {{#each question in model}}
+    <li>(Question loop will display here:)</li>
+    <li>
+      {{#link-to 'question' question}}
+        {{question.title}}
+      {{/link-to}}
+    </li>
+  {{/each}}
 </ul>
