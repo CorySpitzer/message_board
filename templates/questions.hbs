@@ -1,13 +1,14 @@
 <h1>Questions and Queries</h1>
 
+<br>
+
 {{#link-to 'new-question' classNames="btn btn-primary"}}
   New Question?
 {{/link-to}}
 
-<br>
+<br><br>
 
 <ul>
-  <li>(Question loop will display here:)</li>
   <!-- We have 'model' available to us from the questions.js route
   which returns all the question(s), which we can loop over: -->
   {{#each question in model}}
